@@ -33,9 +33,9 @@ fn reverse_list_helper(
 
 pub fn exciting_list(languages: List(String)) -> Bool {
   case languages {
-    [first, ..] if first == "Gleam" -> True
-    [_, second] if second == "Gleam" -> True
-    [_, second, _] if second == "Gleam" -> True
+    ["Gleam", ..] -> True
+    [_, "Gleam"] -> True
+    [_, "Gleam", _] -> True
     _ -> False
   }
 }
