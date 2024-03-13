@@ -30,5 +30,7 @@ pub fn compare_temperature(left: Temperature, right: Temperature) -> Order {
 
 pub fn sort_cities_by_temperature(cities: List(City)) -> List(City) {
   cities
-  |> list.sort(by: fn(c1, c2) { compare_temperature(c1.temperature, c2.temperature) })
+  |> list.sort(by: fn(c1, c2) {
+    compare_temperature(c1.temperature, c2.temperature)
+  })
 }
